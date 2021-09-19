@@ -3,7 +3,7 @@ document.getElementsByClassName('quizbody')[0].style.visibility = 'hidden';
 var question = 0;
 var timer = 60;
 var score = 0;
-var name = '';
+var playerName = '';
 var questions = [
     { q: "What is Javascript?", c0: "Pizza", c1: "Vehicle", c2: "Scripting Language", c3: "Boat", answer: "2" },
     { q: "The external JavaScript file must contain the <script> tag.", c0: "True", c1: "False", c2: "", c3: "", answer: "1" },
@@ -22,6 +22,7 @@ function startQuiz() {
     question = 0;
     timer = 60;
     score = 0;
+    playerName = '';
     // Setup the question layout
     document.getElementById("questiontotal").textContent = questions.length;
     renderQuestion();
@@ -62,10 +63,18 @@ function answer(a) {
 }
 
 function endQuiz() {
-    alert('Quiz is done!');
+    playerName = prompt('Quiz completed!\nWhats your name?');   
+    scorelist = localStorage.getItem('highscores');
+
+    scorelist.push({a:1})
+
+    localStorage.setItem('scorelist', scorelist);
+    
     document.getElementsByClassName('quizhome')[0].style.visibility = 'visible';
     document.getElementsByClassName('quizbody')[0].style.visibility = 'hidden';
     document.getElementsByClassName('quizhome')[0].style.height = "";
+    document.getElementById('questionBtn2')[0].style.visibility = 'hidden';
+    document.getElementById('questionBtn3')[0].style.visibility = 'hidden';
 }
 
 function showScores() {
