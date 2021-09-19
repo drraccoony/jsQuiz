@@ -1,5 +1,5 @@
 # jsQuiz
-Quiz platform written in HTML & Javascript. Lightweight and doesn't require any backend or database.
+Quiz platform written in HTML & Javascript. Lightweight and doesn't require any backend or database. Uses bootstrap CDN.
 
 ![ScreenshotOfUI](screenshot.png?raw=true)
 
