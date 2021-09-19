@@ -1,4 +1,5 @@
 .quizbutton {
     width: 400px;
-
+    height: 64px;
+    margin: 2px;
 }

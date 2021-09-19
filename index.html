@@ -24,7 +24,8 @@
         <button class="btn btn-default" onclick="startQuiz()">Start Quiz</button>
         <button class="btn btn-link" onclick="showScores()"">View Highscores</button>
     </div>
-    <div class="container quizbody" style="position: static;">
+    <div class="container quizbody" style="position: relative;">
+        Score: <span id="scoreDisplay">0</span> Timer: <span id="time"></span>
         <h1>Question <span id="questionnumber"></span> of <span id="questiontotal">?</span></h1>
         <h3 id="questionheader">Question</h3>
         <button class="btn btn-default quizbutton" id="questionBtn0" onclick="answer(0)">Start Quiz</button><br>
